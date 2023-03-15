@@ -18,14 +18,14 @@ const driverObjects = [
   ];
   const driverArray = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby'];
 function findMatching(names, reg){
-    return names.filter(fn = driver =>driver.toLowerCase()===reg.toLowerCase())
+    return names.filter(function(driver){return driver.toLowerCase()===reg.toLowerCase()})
 }
-//console.log(findMatching(driverArray, "Bobby"));
+console.log(findMatching(driverArray, "Bobby"));
 
 function fuzzyMatch(names, reg){
-    return names.filter(fn = driver =>driver.toLowerCase().slice(0,reg.length) === reg.toLowerCase())
+    return names.filter(function(driver){return driver.toLowerCase().slice(0,reg.length) === reg.toLowerCase()})
 }
 //console.log(findMatching(driverArray, "Sa"));
 function matchName(names, reg){
-    return names.filter(fn = driver => driver.name.toLowerCase()=== reg.toLowerCase())
+    return names.filter(function(driver){return driver.name.toLowerCase()=== reg.toLowerCase()})
 }
